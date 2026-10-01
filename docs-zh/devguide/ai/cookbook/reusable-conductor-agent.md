@@ -1,3 +1,7 @@
+---
+description: 把一个用 SDK 编写的智能体部署为稳定的持久化能力，并从任何父工作流中调用它。
+---
+
 # Conductor 代理
 
 ```mermaid

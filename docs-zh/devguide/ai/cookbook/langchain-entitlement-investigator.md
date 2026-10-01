@@ -1,3 +1,7 @@
+---
+description: 用 LangChain 编写一个权益调查者智能体，通过 Conductor SDK 部署，并作为持久化能力调用它。
+---
+
 # LangChain 调查者
 
 ```mermaid

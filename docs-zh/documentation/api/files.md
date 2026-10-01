@@ -1,3 +1,7 @@
+---
+description: 文件 API 创建工作流作用域的元数据记录并签发上传与下载 URL，工作流通过 conductor://file/<id> 句柄交换文件。
+---
+
 # 文件 API
 
 文件 API 创建工作流作用域的元数据记录，并签发上传和下载 URL。工作流可见的句柄是 `conductor://file/<file-id>`；路由路径变量使用裸的 `file-id`。

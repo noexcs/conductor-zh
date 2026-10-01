@@ -1,3 +1,7 @@
+---
+description: 在智能体执行的关键节点设置护栏，校验入站请求、约束模型输出、拦截不安全的工具参数，并把重要写入挂起等待人工批准。
+---
+
 # Agent 护栏
 
 <section class="integration-hero integration-hero--guardrails" aria-label="Agent 护栏">

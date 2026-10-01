@@ -1,3 +1,7 @@
+---
+description: 终止父工作流，并把取消传播到长时间运行的已部署 Conductor 智能体。
+---
+
 # 智能体取消
 
 ```mermaid

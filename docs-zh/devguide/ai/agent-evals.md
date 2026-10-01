@@ -1,3 +1,7 @@
+---
+description: 对智能体做可重复测试，重放代表性请求并断言其实际行为——调用了哪些工具、参数是什么、如何路由、哪些护栏被触发，以及运行如何结束。
+---
+
 # Agent 评估
 
 <section class="integration-hero integration-hero--evals" aria-label="Agent 评估">
