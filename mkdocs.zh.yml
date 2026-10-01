@@ -1,0 +1,291 @@
+site_name: Conductor 中文文档
+site_description: Conductor 是一个开源的持久化代码执行引擎与智能体工作流引擎，采用 Saga 补偿模式编排分布式工作流，支持 Java、Python、Go 等多语言 worker。本文档为官方英文文档的简体中文翻译版。
+repo_url: https://github.com/conductor-oss/conductor
+site_url: https://noexcs.github.io/conductor-zh/
+edit_uri: ''
+strict: false
+use_directory_urls: false
+docs_dir: docs-zh
+site_dir: site-zh
+exclude_docs: |
+  index.html
+not_in_nav: |
+  devguide/architecture/directed-acyclic-graph.md
+  devguide/cookbook/files-api-usecase.md
+  devguide/labs/**
+  documentation/advanced/annotation-processor.md
+  quickstart/choose-path.md
+  resources/license.md
+  wmq/**
+
+nav:
+  - 首页:
+    - index.md
+    - 常见问题: devguide/faq.md
+  - 快速开始:
+    - 快速开始指南: quickstart/index.md
+    - 连接 Conductor: quickstart/connect.md
+    - 用 AI 编程助手构建: devguide/how-tos/conductor-skills.md
+    - 你的第一个工作流与 Worker: quickstart/first-worker.md
+    - 你的第一个智能体: quickstart/first-agent.md
+    - 接入你框架的智能体: quickstart/framework-agents.md
+    - 从 JSON 运行工作流: quickstart/first-workflow.md
+    - AI 助手使用指南: devguide/ai/conductor-for-ai-assistants.md
+  - 工作流:
+    - 概述: devguide/workflows/index.md
+    - 工作流: devguide/concepts/workflows.md
+    - 任务: devguide/concepts/tasks.md
+    - 工作者: devguide/concepts/workers.md
+    - 构建:
+      - 创建工作流: devguide/how-tos/Workflows/creating-workflows.md
+      - 选择任务: devguide/how-tos/Tasks/choosing-tasks.md
+      - 创建任务: devguide/how-tos/Tasks/creating-tasks.md
+      - 任务输入: devguide/how-tos/Tasks/task-inputs.md
+      - Schema 校验: devguide/how-tos/schema-validation.md
+      - Schema 注册表: devguide/how-tos/schema-registry.md
+      - 管理工作流版本: devguide/how-tos/Workflows/versioning-workflows.md
+      - 测试工作流: devguide/how-tos/Workflows/testing-workflows.md
+    - 运行:
+      - 启动工作流: devguide/how-tos/Workflows/starting-workflows.md
+      - 选择触发方式: devguide/how-tos/Workflows/choosing-a-trigger.md
+      - 定时调度工作流: devguide/how-tos/Workflows/scheduling-workflows.md
+      - 发送信号: devguide/cookbook/sending-signals.md
+      - 错误处理: devguide/how-tos/Workflows/handling-errors.md
+    - 运维:
+      - 生产环境实践: devguide/workflows/production-path.md
+      - 查看执行: devguide/how-tos/Workflows/viewing-workflow-executions.md
+      - 搜索工作流: devguide/how-tos/Workflows/searching-workflows.md
+      - 调试工作流: devguide/how-tos/Workflows/debugging-workflows.md
+      - 扩展 Worker 指南: devguide/how-tos/Workers/scaling-workers.md
+  - 智能体:
+    - 概述: devguide/ai/index.md
+    - 智能体概念: devguide/concepts/agents.md
+    - 持久化智能体: devguide/ai/durable-agents.md
+    - 为什么用 Conductor 构建智能体: devguide/ai/why-conductor.md
+    - 你的第一个智能体: quickstart/first-agent.md
+    - 构建:
+      - Conductor 原生智能体: devguide/ai/conductor-agents.md
+      - 框架智能体: devguide/ai/agent-framework-recipes.md
+      - 构建智能体工作流图: devguide/ai/first-ai-agent.md
+      - LLM 编排: devguide/ai/llm-orchestration.md
+      - 持久化自适应图: devguide/ai/dynamic-workflows.md
+      - 多智能体架构: devguide/ai/multi-agent-architecture.md
+    - 运维:
+      - 智能体配置: devguide/ai/agent-configuration.md
+      - 部署智能体: devguide/ai/deploying-agents.md
+      - 调度智能体: devguide/ai/scheduling-agents.md
+      - Token 效率: devguide/ai/token-efficiency.md
+    - 治理:
+      - 智能体护栏: devguide/ai/agent-guardrails.md
+      - 智能体评估: devguide/ai/agent-evals.md
+      - 人工介入: devguide/ai/human-in-the-loop.md
+      - 失败语义: devguide/ai/failure-semantics.md
+    - 生产级智能体架构: devguide/ai/production-agent-architecture.md
+  - AI 示例手册:
+    - 概述: devguide/ai/cookbook/index.md
+    - 智能体模式:
+      - RAG 智能体: devguide/ai/cookbook/rag-agent.md
+      - MCP 工具调用: devguide/ai/cookbook/mcp-tool-calling.md
+      - A2A 智能体编排: devguide/ai/cookbook/a2a-orchestration.md
+      - HITL 工作流: devguide/ai/cookbook/hitl-approval.md
+      - 带护栏的 LLM: devguide/ai/cookbook/llm-guardrails.md
+      - 深度研究智能体: devguide/ai/cookbook/deep-research.md
+      - A2A 委托: devguide/ai/cookbook/remote-a2a-delegation.md
+      - LLM 工作流: devguide/cookbook/ai-llm.md
+      - AI 工作流路由: devguide/cookbook/ai-workflow-routing.md
+    - 智能体配方:
+      - 工具调用智能体: devguide/ai/cookbook/agent-tool-calling.md
+      - 带护栏的智能体: devguide/ai/cookbook/agent-guardrails.md
+      - 多智能体交接: devguide/ai/cookbook/agent-handoff.md
+      - 带记忆的智能体: devguide/ai/cookbook/agent-memory.md
+      - 带 CLI 工具的智能体: devguide/ai/cookbook/agent-cli-tools.md
+      - 大规模并行智能体: devguide/ai/cookbook/agent-scatter-gather.md
+      - Conductor 智能体: devguide/ai/cookbook/reusable-conductor-agent.md
+      - LangChain 调查智能体: devguide/ai/cookbook/langchain-entitlement-investigator.md
+      - ADK 分诊: devguide/ai/cookbook/google-adk-order-triage.md
+      - 专家并行评审: devguide/ai/cookbook/parallel-specialist-review.md
+      - 智能体审批: devguide/ai/cookbook/human-approved-action.md
+      - 智能体取消: devguide/ai/cookbook/conductor-agent-cancellation.md
+  - 设计模式:
+    - 概述: devguide/cookbook/index.md
+    - 工作流模式:
+      - 微服务编排: devguide/cookbook/microservice-orchestration.md
+      - 动态并行: devguide/cookbook/dynamic-parallelism.md
+      - 等待与定时器模式: devguide/cookbook/wait-and-timers.md
+      - 任务超时与重试: devguide/cookbook/task-timeouts-and-retries.md
+      - Saga 与补偿: devguide/cookbook/saga-compensation.md
+      - 轮询长时任务: devguide/cookbook/http-poll-long-running-job.md
+      - 定时工作流: devguide/cookbook/workflow-scheduling.md
+      - 代码中的动态工作流: devguide/cookbook/dynamic-workflows.md
+      - 事件驱动模式: devguide/cookbook/event-driven.md
+  - SDK:
+    - SDK 总览: documentation/clientsdks/index.md
+    - Java: documentation/clientsdks/java-sdk.md
+    - Python: documentation/clientsdks/python-sdk.md
+    - Go: documentation/clientsdks/go-sdk.md
+    - JavaScript: documentation/clientsdks/js-sdk.md
+    - C#: documentation/clientsdks/csharp-sdk.md
+    - Ruby: documentation/clientsdks/ruby-sdk.md
+    - Rust: documentation/clientsdks/rust-sdk.md
+  - 集成:
+    - 概述: devguide/integrations/index.md
+    - 事件驱动编排:
+      - 概述: devguide/how-tos/event-bus.md
+      - 发布事件: devguide/how-tos/publish-events.md
+      - 消费与路由事件: devguide/how-tos/consume-route-events.md
+      - 入站 Webhook: devguide/how-tos/incoming-webhooks.md
+      - 工作流状态事件: devguide/how-tos/workflow-status-events.md
+    - MCP 集成: devguide/ai/mcp-guide.md
+    - A2A 集成: devguide/ai/a2a-integration.md
+  - 学习:
+    - 学习资源: learn/index.md
+    - 贡献:
+      - 概述: resources/contribute/index.md
+      - 代码仓库: resources/contribute/repositories.md
+      - 贡献指南: resources/contributing.md
+      - 最佳实践: resources/contribute/best-practices.md
+      - 行为准则: resources/contribute/code-of-conduct.md
+    - 获取帮助: resources/contribute/get-help.md
+  - 参考:
+    - API:
+      - API 参考: documentation/api/index.md
+      - 元数据: documentation/api/metadata.md
+      - 启动工作流: documentation/api/startworkflow.md
+      - 工作流: documentation/api/workflow.md
+      - 任务: documentation/api/task.md
+      - 文件: documentation/api/files.md
+      - 批量操作: documentation/api/bulk.md
+      - 事件处理器: documentation/api/eventhandlers.md
+      - 任务域: documentation/api/taskdomains.md
+      - 调度器: documentation/api/scheduler.md
+      - 智能体: documentation/api/agents.md
+    - CLI: documentation/cli/index.md
+    - 工作流定义:
+      - 工作流定义参考: documentation/configuration/workflowdef/index.md
+      - Schemas: documentation/configuration/schemas.md
+    - 任务定义: documentation/configuration/taskdef.md
+    - 运算符:
+      - 运算符总览: documentation/configuration/workflowdef/operators/index.md
+      - Fork 任务: documentation/configuration/workflowdef/operators/fork-task.md
+      - Join 任务: documentation/configuration/workflowdef/operators/join-task.md
+      - 排他 Join 任务: documentation/configuration/workflowdef/operators/exclusive-join-task.md
+      - Switch 任务: documentation/configuration/workflowdef/operators/switch-task.md
+      - Do-While 任务: documentation/configuration/workflowdef/operators/do-while-task.md
+      - 动态任务: documentation/configuration/workflowdef/operators/dynamic-task.md
+      - 动态 Fork 任务: documentation/configuration/workflowdef/operators/dynamic-fork-task.md
+      - 子工作流任务: documentation/configuration/workflowdef/operators/sub-workflow-task.md
+      - 启动工作流任务: documentation/configuration/workflowdef/operators/start-workflow-task.md
+      - 设置变量任务: documentation/configuration/workflowdef/operators/set-variable-task.md
+      - 终止任务: documentation/configuration/workflowdef/operators/terminate-task.md
+    - 系统任务:
+      - 系统任务总览: documentation/configuration/workflowdef/systemtasks/index.md
+      - HTTP 任务: documentation/configuration/workflowdef/systemtasks/http-task.md
+      - 内联任务: documentation/configuration/workflowdef/systemtasks/inline-task.md
+      - 事件任务: documentation/configuration/workflowdef/systemtasks/event-task.md
+      - 人工任务: documentation/configuration/workflowdef/systemtasks/human-task.md
+      - JSON-JQ 转换任务: documentation/configuration/workflowdef/systemtasks/json-jq-transform-task.md
+      - Kafka 发布任务: documentation/configuration/workflowdef/systemtasks/kafka-publish-task.md
+      - Noop 任务: documentation/configuration/workflowdef/systemtasks/noop-task.md
+      - JDBC 任务: documentation/configuration/workflowdef/systemtasks/jdbc-task.md
+      - 等待任务: documentation/configuration/workflowdef/systemtasks/wait-task.md
+      - 拉取工作流消息任务: documentation/configuration/workflowdef/systemtasks/pull-workflow-messages-task.md
+      - AI 任务: documentation/configuration/workflowdef/systemtasks/ai-tasks.md
+    - 事件处理器: documentation/configuration/eventhandlers.md
+  - 平台:
+    - 核心概念: devguide/concepts/index.md
+    - 为什么选择 Conductor: devguide/concepts/conductor.md
+    - 架构: devguide/architecture/index.md
+    - 持久化执行: architecture/durable-execution.md
+    - JSON 与代码原生: architecture/json-native.md
+    - 任务生命周期: devguide/architecture/tasklifecycle.md
+    - 部署:
+      - 生产部署: devguide/running/deploy.md
+      - 源码构建: devguide/running/source.md
+      - 托管版: devguide/running/hosted.md
+      - CI/CD 集成: devguide/how-tos/cicd-integration.md
+      - 最佳实践: devguide/bestpractices.md
+    - 配置: documentation/configuration/appconf.md
+    - 可观测性:
+      - 服务端指标: documentation/metrics/server.md
+      - 客户端指标: documentation/metrics/client.md
+    - 高级:
+      - 扩展 Conductor: documentation/advanced/extend.md
+      - 隔离组: documentation/advanced/isolationgroups.md
+      - 工作流归档: documentation/advanced/archival-of-workflows.md
+      - 外部载荷存储: documentation/advanced/externalpayloadstorage.md
+      - 文件存储: documentation/advanced/file-storage.md
+      - Redis 配置: documentation/advanced/redis.md
+      - PostgreSQL 配置: documentation/advanced/postgresql.md
+      - OpenSearch 配置: documentation/advanced/opensearch.md
+
+theme:
+  name: material
+  logo: img/logo.svg
+  custom_dir: docs-zh/overrides
+  palette:
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  font: false
+  features:
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/conductor-oss/conductor
+    - icon: fontawesome/brands/slack
+      link: https://join.slack.com/t/orkes-conductor/shared_invite/zt-3dpcskdyd-W895bJDm8psAV7viYG3jFA
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@orkesio
+
+extra_css:
+  - css/custom.css
+
+plugins:
+  - search
+  - macros
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - !relative $config_dir
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:main.mermaid_fence
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+
+copyright: Conductor 官方文档（简体中文翻译版）

@@ -1,0 +1,17 @@
+# Conductor 文档索引（面向 LLM）
+
+> Conductor 是面向工作流、自适应智能体与 AI 系统的开源持久化执行平台，本文档是其权威技术文档（简体中文版）。
+
+- [AI 助手使用指南](devguide/ai/conductor-for-ai-assistants.html): 规范词汇、编写规则与任务选择指引。
+- [快速开始](quickstart/index.html): 创建并运行第一个持久化工作流。
+- [持久化工作流](devguide/workflows/index.html): 工作流设计、可靠性、worker 与实用配方。
+- [设计模式手册](devguide/cookbook/index.html): 编排、并行、等待、重试、事件、AI、调度与动态工作流的即用配方。
+- [智能体与 AI](devguide/ai/index.html): 原生 AI 任务、框架编写的智能体、MCP、向量工作流与自适应图。
+- [持久化自适应图](devguide/ai/dynamic-workflows.html): 受治理的运行时规划、有界循环、扇出、审批、取消与恢复。
+- [智能体护栏](devguide/ai/agent-guardrails.html): 输入/输出策略、能力审批与人工审核。
+- [智能体评估](devguide/ai/agent-evals.html): 正确性用例、语义断言、录制/回放与 CI 校验。
+- [生产级智能体架构](devguide/ai/production-agent-architecture.html): 端到端生产设计。
+- [工作流定义参考](documentation/configuration/workflowdef/index.html): 支持的字段与系统任务链接。
+- [API 参考](documentation/api/index.html): 工作流、任务与元数据端点。
+
+如需汇总的源材料，请使用 [llms-full.txt](llms-full.txt)。当文档与实现不一致时，以工作流定义、Java 源码和 SDK 源码为准。

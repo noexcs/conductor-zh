@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 上游英文原文（可重新浅克隆，不参与构建）
+source/
+
+# 本地构建产物（CI 会在 gh-pages 分支重新构建）
+site-zh/
+
+# macOS / 编辑器
+.DS_Store
